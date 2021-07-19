@@ -22,6 +22,8 @@ module.exports = {
   plugins: [
     isDevelopment && new ReactRefreshWebpackPlugin(),
     new htmlWebpackPlugin({
+      name: 'index.html',
+      inject: false,
       template: path.resolve(__dirname, 'public', 'index.html'),
     }),
   ].filter(Boolean),
